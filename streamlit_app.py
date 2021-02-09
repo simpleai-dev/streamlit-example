@@ -9,6 +9,16 @@ import streamlit as st
 
 """
 
+st.write("Calculate Future Values")
+
+
+presentValue = st.number_input('Input Present Value')
+
+interestAnnulay = st.number_input('Input Interest rate, like .07 etc')
+
+years = st.number_input('Input Years')
+
+
 
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
