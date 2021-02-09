@@ -18,6 +18,16 @@ interestAnnulay = st.number_input('Input Interest rate, like .07 etc')
 
 years = st.number_input('Input Years')
 
+st.write("Future Value")
+
+
+
+
+
+if st.button("Calculate"):
+    futureValue = presentValue(1 + interestAnnulay) ** years
+    st.write(futureValue)
+
 
 
 with st.echo(code_location='below'):
