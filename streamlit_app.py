@@ -70,7 +70,7 @@ presentValue3 = col3.number_input('Input Present Value : ex 3')
 
 finalValue3 = col3.number_input('Input Final Value like 60000 etc')
 
-years3 = col3.number_input('Input Years here')
+years3 = col3.number_input('Input Years here : Ex 3')
 
 col3.write("Calculate Rate")
 
