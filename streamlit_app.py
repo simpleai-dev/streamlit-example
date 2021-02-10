@@ -20,6 +20,8 @@ years = st.number_input('Input Years')
 
 st.write("Future Value")
 
+st.write("Example : You have $50,000 in savings for retirement. If your investments earn 7% annually, how much will you accumulate in 40 years?")
+
 
 
 
