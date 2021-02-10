@@ -4,6 +4,7 @@ import math
 import pandas as pd
 import streamlit as st
 
+st.beta_set_page_config(layout="wide")
 """
 # Financial Calculations
 
