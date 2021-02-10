@@ -39,7 +39,7 @@ if col1.button("Calculate Future Value"):
 
 
 
-col2.write("Calculate Present Values")
+col2.header("Calculate Present Values")
 
 col2.write("Example : What is the value today of $50,000 to be received twenty years from now if the appropriate interest rate is 6%?")
 
@@ -58,3 +58,24 @@ col2.write("Calculate Present Value")
 if col2.button("Calculate Present Value"):
     futureValue2 = finaltValue2/(1+interestAnnulay2)**years2
     col2.write(futureValue2)
+
+
+col3.header("Calculate Rate")
+
+col3.write("Example :A financial institution offers a double-your money savings account in which you receive $2 in fourteen years for every dollar you invest today. What annual interest rate does this account offer ?")
+
+
+
+presentValue3 = col3.number_input('Input Present Value')
+
+finalValue3 = col3.number_input('Input Final Value like 60000 etc')
+
+years3 = col3.number_input('Input Years here')
+
+col3.write("Calculate Rate")
+
+
+
+if col3.button("Calculate Rate"):
+    rate3 = (finalValue3/presentValue3)**(1/years3) -1
+    col2.write(rate3)
