@@ -78,4 +78,4 @@ col3.write("Calculate Rate")
 
 if col3.button("Calculate Rate"):
     rate3 = (finalValue3/presentValue3)**(1/years3) -1
-    col2.write(rate3)
+    col3.write(rate3)
