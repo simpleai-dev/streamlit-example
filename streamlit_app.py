@@ -37,11 +37,11 @@ st.write("Example : What is the value today of $50,000 to be received twenty yea
 
 
 
-finaltValue2 = st.number_input('Input Present Value')
+finaltValue2 = st.number_input('Input Future Value')
 
-interestAnnulay2 = st.number_input('Input Interest rate, like .07 etc')
+interestAnnulay2 = st.number_input('Input Interest rate, like .06 etc')
 
-years2 = st.number_input('Input Years')
+years2 = st.number_input('Input Years here')
 
 st.write("Calculate Present Value")
 
