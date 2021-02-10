@@ -48,5 +48,5 @@ st.write("Calculate Present Value")
 
 
 if st.button("Calculate Present Value"):
-    futureValue2 = finaltValue2/(1+interestAnnulay2)^years2
+    futureValue2 = finaltValue2/(1+interestAnnulay2)**years2
     st.write(futureValue2)
