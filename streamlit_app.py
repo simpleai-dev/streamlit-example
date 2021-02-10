@@ -66,7 +66,7 @@ col3.write("Example :A financial institution offers a double-your money savings 
 
 
 
-presentValue3 = col3.number_input('Input Present Value')
+presentValue3 = col3.number_input('Input Present Value : ex 3')
 
 finalValue3 = col3.number_input('Input Final Value like 60000 etc')
 
