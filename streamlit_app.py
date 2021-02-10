@@ -9,44 +9,51 @@ import streamlit as st
 
 """
 
-st.write("Calculate Future Values")
 
-st.write("Example : You have $50,000 in savings for retirement. If your investments earn 7% annually, how much will you accumulate in 40 years?")
-
-
-
-presentValue1 = st.number_input('Input Present Value')
-
-interestAnnulay1 = st.number_input('Input Interest rate, like .07 etc')
-
-years1 = st.number_input('Input Years')
-
-st.write("Future Value")
+col1 , col2, col3 = st.beta_columns(3)
 
 
 
-if st.button("Calculate Future Value"):
+
+
+col1.header("Calculate Future Values")
+
+col1.write("Example : You have $50,000 in savings for retirement. If your investments earn 7% annually, how much will you accumulate in 40 years?")
+
+
+
+presentValue1 = col1.number_input('Input Present Value')
+
+interestAnnulay1 = col1.number_input('Input Interest rate, like .07 etc')
+
+years1 = col1.number_input('Input Years')
+
+col1.write("Future Value")
+
+
+
+if col1.button("Calculate Future Value"):
     futureValue = presentValue1*(1 + interestAnnulay1)** years1
-    st.write(futureValue)
+    col1.write(futureValue)
 
 
 
-st.write("Calculate Present Values")
+col2.write("Calculate Present Values")
 
-st.write("Example : What is the value today of $50,000 to be received twenty years from now if the appropriate interest rate is 6%?")
-
-
-
-finaltValue2 = st.number_input('Input Future Value')
-
-interestAnnulay2 = st.number_input('Input Interest rate, like .06 etc')
-
-years2 = st.number_input('Input Years here')
-
-st.write("Calculate Present Value")
+col2.write("Example : What is the value today of $50,000 to be received twenty years from now if the appropriate interest rate is 6%?")
 
 
 
-if st.button("Calculate Present Value"):
+finaltValue2 = col2.number_input('Input Future Value')
+
+interestAnnulay2 = col2.number_input('Input Interest rate, like .06 etc')
+
+years2 = col2.number_input('Input Years here')
+
+col2.write("Calculate Present Value")
+
+
+
+if col2.button("Calculate Present Value"):
     futureValue2 = finaltValue2/(1+interestAnnulay2)**years2
-    st.write(futureValue2)
+    col2.write(futureValue2)
