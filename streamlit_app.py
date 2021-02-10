@@ -11,44 +11,42 @@ import streamlit as st
 
 st.write("Calculate Future Values")
 
-
-presentValue = st.number_input('Input Present Value')
-
-interestAnnulay = st.number_input('Input Interest rate, like .07 etc')
-
-years = st.number_input('Input Years')
-
-st.write("Future Value")
-
 st.write("Example : You have $50,000 in savings for retirement. If your investments earn 7% annually, how much will you accumulate in 40 years?")
 
 
 
+presentValue1 = st.number_input('Input Present Value')
+
+interestAnnulay1 = st.number_input('Input Interest rate, like .07 etc')
+
+years1 = st.number_input('Input Years')
+
+st.write("Future Value")
 
 
-if st.button("Calculate"):
-    futureValue = presentValue*(1 + interestAnnulay)** years
+
+if st.button("Calculate Future Value"):
+    futureValue = presentValue1*(1 + interestAnnulay1)** years1
     st.write(futureValue)
 
 
 
-with st.echo(code_location='below'):
-    total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
-    num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
+st.write("Calculate Present Values")
 
-    Point = namedtuple('Point', 'x y')
-    data = []
+st.write("Example : What is the value today of $50,000 to be received twenty years from now if the appropriate interest rate is 6%?")
 
-    points_per_turn = total_points / num_turns
 
-    for curr_point_num in range(total_points):
-        curr_turn, i = divmod(curr_point_num, points_per_turn)
-        angle = (curr_turn + 1) * 2 * math.pi * i / points_per_turn
-        radius = curr_point_num / total_points
-        x = radius * math.cos(angle)
-        y = radius * math.sin(angle)
-        data.append(Point(x, y))
 
-    st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
-        .mark_circle(color='#0068c9', opacity=0.5)
-        .encode(x='x:Q', y='y:Q'))
+finaltValue2 = st.number_input('Input Present Value')
+
+interestAnnulay2 = st.number_input('Input Interest rate, like .07 etc')
+
+years2 = st.number_input('Input Years')
+
+st.write("Calculate Present Value")
+
+
+
+if st.button("Calculate Present Value"):
+    futureValue2 = finaltValue2/(1+interestAnnulay2)^years2
+    st.write(futureValue2)
