@@ -18,7 +18,7 @@ st.sidebar.header("Select Chapter")
 chapter = st.sidebar.radio("Select Chapter", ('Finance', 'Economics', 'Statistics'))
 
 if chapter == 'Finance':
-    option_finance = st.selectbox('Select Topic',('Annual Time Value of Money', 'Sub-Annual Time Value of Money', 'Constant Annuity & Perpetuity'))
+    option_finance = st.selectbox('Select Topic',('Annual Time Value of Money', 'Constant Annuity & Perpetuity'))
     if option_finance == 'Annual Time Value of Money':
         st.header("Calculate Future Values")
         st.write("Example : You have $50,000 in savings for retirement. If your investments earn 7% annually, how much will you accumulate in 40 years?")
@@ -65,3 +65,23 @@ if chapter == 'Finance':
             NY_result = round(np.log(NY_final_value/NY_present_value)/np.log(1+NY_rate),2)
             st.write(NY_result)
             
+            
+    if option_finance == 'Constant Annuity & Perpetuity':
+        
+        st.write("Consider an account holding $10000 and earning 10% interest each year")
+        st.write("a. How much interest would be due at the end of one year ? ")
+        CAP_PV = st.number_input("CAP : Enter Present Value")
+        CAP_R = st.number_input("CAP: Enter Rate ")
+        if st.button("CAP: calculate Payment"):
+            CAP_PMT = CAP_PV * CAP_R
+            st.write("Total Interest Due : ")
+            st.write(CAP_PMT)
+        st.write("b. If the account holder withdraws the first years's interest, how much interest would be due at the end of the second year ? ")
+        st.write("Answer: Again 1000")
+        st.write("c. Is teher any reason this process could not continue indefinitely?")
+        st.write("Ans : No reason, it can keep going forever.")
+        st.write("A student borrows $75,000 for bussiness scholl at 6.5% stated annual interest with repayments for 10 years. No additional interest accrues before the first payment.")
+        st.write("a. How much is the monthly Payment?")
+        
+        
+        
