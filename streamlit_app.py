@@ -3,6 +3,7 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
+import numpy as np
 
 st.beta_set_page_config(layout="wide")
 """
@@ -54,4 +55,13 @@ if chapter == 'Finance':
             rate3 = (finalValue3/presentValue3)**(1/years3) -1
             st.write(rate3)
 
-
+        st.header("Number of Years")
+        st.write(Example : You have $50,000 in savings for retirement in an investment earning 7% annually. You aspire to have $1 million in savings when you retire. Assuming you add no more to your  savings, how many years will it take to reach your $1 million goal.)
+        NY_present_value = st.number_input("4.1: Input Present Value")
+        NY_rate = st.number_input("4.2: Input value of rate ")
+        NY_final_value = st.number_input("4.3: Input Final Value ")
+        st.write("4: Calculate Number of years")
+        if st.button("4: Calculate Number of Years "):
+            NY_result = np.log(NY_final_value/NY_present_value)/np.log(1+NY_rate)
+            st.write(NY_result)
+            
