@@ -14,33 +14,23 @@ st.beta_set_page_config(layout="wide")
 
 st.sidebar.header("Select Chapter")
 
+chapter = st.sidebar.radio("Select Chapter", ('Finance', 'Economics', 'Statistics'))
+
+if chapter == 'Finance':
+    option_finance = st.selectbox('Select Topic',('Annual Time Value of Money', 'Sub-Annual Time Value of Money', 'Constant Annuity & Perpetuity'))
+    if option_finance == 'Annual Time Value of Money':
+        st.header("Calculate Future Values")
+        st.write("Example : You have $50,000 in savings for retirement. If your investments earn 7% annually, how much will you accumulate in 40 years?")
+        presentValue1 = col1.number_input('Input Present Value')
+        interestAnnulay1 = col1.number_input('Input Interest rate, like .07 etc')
+        years1 = col1.number_input('Input Years')
+        st.write("Future Value")
+        
+        if st.button("Calculate Future Value"):
+            futureValue = presentValue1*(1 + interestAnnulay1)** years1
+            st.write(futureValue)
 
 col1 , col2, col3 = st.beta_columns(3)
-
-
-
-
-
-col1.header("Calculate Future Values")
-
-col1.write("Example : You have $50,000 in savings for retirement. If your investments earn 7% annually, how much will you accumulate in 40 years?")
-
-
-
-presentValue1 = col1.number_input('Input Present Value')
-
-interestAnnulay1 = col1.number_input('Input Interest rate, like .07 etc')
-
-years1 = col1.number_input('Input Years')
-
-col1.write("Future Value")
-
-
-
-if col1.button("Calculate Future Value"):
-    futureValue = presentValue1*(1 + interestAnnulay1)** years1
-    col1.write(futureValue)
-
 
 
 col2.header("Calculate Present Values")
