@@ -12,6 +12,8 @@ st.beta_set_page_config(layout="wide")
 
 # Annual Time Value of Money
 
+st.sidebar.header("Select Chapter")
+
 
 col1 , col2, col3 = st.beta_columns(3)
 
@@ -81,3 +83,7 @@ col3.write("Calculate Rate")
 if col3.button("Calculate Rate"):
     rate3 = (finalValue3/presentValue3)**(1/years3) -1
     col3.write(rate3)
+    
+    
+st.header("Financial Calculations Continue : ")
+
