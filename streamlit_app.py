@@ -82,6 +82,26 @@ if chapter == 'Finance':
         st.write("Ans : No reason, it can keep going forever.")
         st.write("A student borrows $75,000 for bussiness scholl at 6.5% stated annual interest with repayments for 10 years. No additional interest accrues before the first payment.")
         st.write("a. How much is the monthly Payment?")
+        st.write("b. What is the sum of all the payments ? ")
+        st.write("c. What is the total interest Paid ? ")
+        st.subheader("Annuity(Fixities)")
+        st.write("An annuity is a periodic payment for a fixed term")
+        st.write("A constant annuity is an annuity with a constant periodic payment.")
+        st.subheader("Perpetuity")
+        st.write("A perpetuity is a periodic payment forever.")
+        st.write("A constant perpetuity is a perpetuity with a constant periodic payment.")
+        st.subheader("Constant Perpetuity")
+        st.write("What is the present value today of $3000 paid each year forever, assuming a discount rate of 5% and the first payment is received one year from now?")
+        st.subheader('OR')
+        st.write("What amount would you have to invest today at 5% annual interest to generate an annual payment of $3000 forever ?")
+        CAP_PMT_2 = st.number_input("CAP 2: Enter Payment amount")
+        CAP_R_2 = st.number_input("CAP 2: Enter Rate")
+        if st.button("CAP2 : Calculate Present Value PV "):
+            CAP_PV_2 = CAP_PMT_2/CAP_R_2
+            st.write("So you need to invest : ")
+            st.write(CAP_PV_2)
+        
+        
         
         
         
