@@ -62,6 +62,6 @@ if chapter == 'Finance':
         NY_final_value = st.number_input("4.3: Input Final Value ")
         st.write("4: Calculate Number of years")
         if st.button("4: Calculate Number of Years "):
-            NY_result = np.log(NY_final_value/NY_present_value)/np.log(1+NY_rate)
+            NY_result = round(np.log(NY_final_value/NY_present_value)/np.log(1+NY_rate),2)
             st.write(NY_result)
             
