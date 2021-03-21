@@ -185,7 +185,16 @@ if chapter == 'Finance':
         if st.button("GA3: Calculate based on previos "):
             GA3_PV = GA3_FV/(1+GA3_r)**GA3_n_actual      
             st.write(GA3_PV)  
-        
+            
+        st.subheader("Growing Annuity Payment")
+        st.write("Suppose you invest $200000 in a 20-year grwoing annuity with the first payment one year from now and each subsequent payment growing by 3%. At 7% rate of return, how much is the first paymnet you receive ? ")
+        GA4_PV = st.number_input("GA4: Enter Present Value")
+        GA4_r = st.number("GA4: Enter Rate")
+        GA4_g = st.number_input("GA4: Enter growth")
+        GA4_n = st.number_input("GA4: Enter Number of years ")
+        if st.button("GA4: Calculate PMT "):
+            GA4_PMT = GA4_PV*(GA4_r-GA4_g)/(1-((1+GA4_g)/(1+GA4_r))**GA4_n)
+            st.write(GA4_PMT)
 
         
         
