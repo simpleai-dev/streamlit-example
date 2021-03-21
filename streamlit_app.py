@@ -181,7 +181,7 @@ if chapter == 'Finance':
         GA3_r = GA2_r
         GA3_n = st.number_input("GA3: ex: six years before retirement")
         GA3_n_actual = GA3_n -1 
-        GA3_FV = st.number("GA3: Enter previous output")
+        GA3_FV = st.number_input("GA3: Enter previous output")
         if st.button("GA3: Calculate based on previos "):
             GA3_PV = GA3_FV/(1+GA3_r)**GA3_n_actual      
             st.write(GA3_PV)  
