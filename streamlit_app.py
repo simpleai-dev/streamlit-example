@@ -179,7 +179,7 @@ if chapter == 'Finance':
         st.write(" We already calculated above PV0 and PMT1, but in this case when 6 years before so, PMT6 and PV5 we got.")
         st.write("Now we need PV0")
         GA3_r = GA2_r
-        GA3_n = st.write("GA3: ex: six years before retirement")
+        GA3_n = st.number_input("GA3: ex: six years before retirement")
         GA3_n_actual = GA3_n -1 
         GA3_FV = GA2_PV
         if st.button("GA3: Calculate based on previos "):
