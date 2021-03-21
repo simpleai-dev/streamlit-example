@@ -195,7 +195,20 @@ if chapter == 'Finance':
         if st.button("GA4: Calculate PMT "):
             GA4_PMT = GA4_PV*(GA4_r-GA4_g)/(1-((1+GA4_g)/(1+GA4_r))**GA4_n)
             st.write(GA4_PMT)
-
+            
+        st.subheader("Sub Annual Growing Annuity paymeny")
+        st.write("A student borrows $75000 for bussiness school at 6.5% stated annual interest with repayment in monthly payments for 10 years. No additional interest accurues during school.")
+        st.write("a. If payments are constant, how much is the mothly payment. we did this before")
+        st.write("b. If payments grow by 0.3% each month, how much is the first monthly payment ? ")
+        GA5_PV = st.number_input("GA5: Enter Present Value")
+        GA5_rst = st. number_input("GA5: Enter stated rate")
+        GA5_g_p = st.number_input("GA5: Enter monthly growth")
+        GA5_n = st.number_input("GA5: Enter years")
+        GA5_p = st.number_input("GA5: Enter 12 for monthly")
+        if st.button("GA5: Calculate PMT "):
+            GA5_PMT = GA5_PV*(GA5_rst/GA5_p - GA5_g_p)/(1-((1+GA5_g_p)/(1+GA5_rst/GA5_p))**(GA5_n*GA5_p))
+            st.write(GA5_PMT)
+        
         
         
         
