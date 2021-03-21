@@ -152,6 +152,7 @@ if chapter == 'Finance':
             st.write(CASPV_PV)
             
     if option_finance == 'Growing Annuity':
+        st.subheader('Growing Perpetuity')
         st.write("As we know that constant Perpetuity is PV=PMT/r")
         st.write("What amount would we have to put in the bank today at 5% annual interest to genereate a series of payments each year forever, starting with $1000 paid one year from now and the pament growing in each subsequent year by 2% to offfset inflation.")
         st.write("Formula : PV = PMT/(r-g)")
@@ -162,7 +163,16 @@ if chapter == 'Finance':
         if st.button("GA1: Calculate PV "):
             GA1_PV = GA1_PMT/(GA1_r-GA1_g)
             st.write(GA1_PV)
-        
+            
+        st.subheader("Growing Annuity")
+        st.write("Vera's Compensation includes a 10-year annuity that pays $60000 at retirement, with each subsecuent payment growing by 2.5%. Vera's firm's policy is to pre-fund such annuities one year before retirement. At 6% interest, how much would the firm need to invest?")
+        GA2_PMT = st.number_input("GA2: Enter PMT ")
+        GA2_r = st.number_input('GA2: Enter Rate')
+        GA2_g = st.number_input("GA2: Enter Growth rate")
+        GA2_n = st.number_input("GA2: Enter number of years")
+        if st.button("GA2: Calculate Present Value"):
+            GA2_PV = (GA2_PMT/(GA2_r- GA2_g))*(1-((1+GA2_g)/(1+GA2_r))**GA2_n)
+            st.write(GA2_PV)
         
         
         
