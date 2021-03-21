@@ -100,6 +100,20 @@ if chapter == 'Finance':
             CAP_PV_2 = CAP_PMT_2/CAP_R_2
             st.write("So you need to invest : ")
             st.write(CAP_PV_2)
+            
+            
+        st.subheader("Constant Annuity Present Value")
+        st.write("For tax reasons, your client wishes to purchase a 10-year annuity that pays $100000 each year, with the first payment in one year.")
+        st.write("a: With no interest on the invested amount, how much would the client need to invest now?")
+        st.write("Ans : 100000 multiply by 10")
+        st.write("b: at 6% interest, how much would the client need to invest now? ")
+        CAPV_n = st.number_input("CAPV: Enter number of years")
+        CAPV_r = st.number_input("CAPV: Enter rate")
+        CAPV_pmt = st.number_input("CAPV: Enter PMT")
+        if st.button("CAPV: Calculate PV"):
+            CAPV_PV = (CAPV_pmt/CAPV_r)*(1- 1/(1+CAPV_r)**CAPV_n)
+            st.write(CAPV_PV)
+
         
         
         
