@@ -114,7 +114,7 @@ if chapter == 'Finance':
             CAPV_PV = (CAPV_pmt/CAPV_r)*(1- 1/(1+CAPV_r)**CAPV_n)
             st.write(CAPV_PV)
             
-        st.subheader("Constant Annuity Payment (Invest)")
+        st.subheader("Constant Annuity Payment (Invest)or borrow")
         st.write("Suppose you invest $200000 in a 20-year constan annuity with the first payment one year from now.")
         st.write("b: At 7% rate of return, how much do you receive each year?")
         CAPI_PV = st.number_input("CAPV: Enter Present Value")
@@ -124,6 +124,23 @@ if chapter == 'Finance':
             CAPI_pmt = CAPI_PV*CAPI_r/(1-1/(1+CAPI_r)**CAPI_n)
             st.write(CAPI_pmt)
         st.write("c: At 7% rate of return, how much do you receive over 20 years ? ")
+        st.write(" That will be  previous anser * 20 ")
+        st.write("Total Interest = Total payment - PV")
+        st.write("same will be valid for borrow")
+        st.subheader("Constant Annuity Sub-Annual Payment")
+        st.write("A student borrows $75000 for bussiness schoold at 6.5% stated annual interest with repayment in equal monthly payments for 10 years. No additional interest accurs during school.")
+        st.write("a. How much is the monthly payment ? ")
+        CASP_PV = st.number_input("CASP: Enter Present Value")
+        CASP_rst = st.number_input("CASP: Enter Rate")
+        CASP_n = st.number_input("CASP: Enter total years")
+        CASP_p = st.number_input("CASP: Enter 12 if monthly")
+        if st.button("CASP: Caluclate PMT"):
+            CASP_PMT = CASP_PV*(CASP_rst/CASP_p)/(1-(1/(1+CASP_rst/CASP_p)**(CASP_n*CASP_p)))
+            st.write(CASP_PMT)
+        
+        
+        
+        
 
         
         
