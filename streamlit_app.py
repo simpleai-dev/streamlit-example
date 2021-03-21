@@ -113,6 +113,17 @@ if chapter == 'Finance':
         if st.button("CAPV: Calculate PV"):
             CAPV_PV = (CAPV_pmt/CAPV_r)*(1- 1/(1+CAPV_r)**CAPV_n)
             st.write(CAPV_PV)
+            
+        st.subheader("Constant Annuity Payment (Invest)")
+        st.write("Suppose you invest $200000 in a 20-year constan annuity with the first payment one year from now.")
+        st.write("b: At 7% rate of return, how much do you receive each year?")
+        CAPI_PV = st.number_input("CAPV: Enter Present Value")
+        CAPI_n = st.number_input("CAPI: Enter number of years")
+        CAPI_r = st.number_input("CAPI: Enter rate")
+        if st.button("CAPI: caluclate PMT "):
+            CAPI_pmt = CAPI_PV*CAPI_r/(1-1/(1+CAPI_r)**CAPI_n)
+            st.write(CAPI_pmt)
+        st.write("c: At 7% rate of return, how much do you receive over 20 years ? ")
 
         
         
