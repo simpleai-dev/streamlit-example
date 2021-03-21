@@ -138,6 +138,19 @@ if chapter == 'Finance':
             CASP_PMT = CASP_PV*(CASP_rst/CASP_p)/(1-(1/(1+CASP_rst/CASP_p)**(CASP_n*CASP_p)))
             st.write(CASP_PMT)
         
+        st.subheader("Constnat Annuity Sub-Annual Present Value")
+        st.write("You can afford $300 per month for car loan payments.")
+        st.write("a: For a 36-month loan at 6% stated annual interest, with the first payment one month from now, how much can you borrow?")
+        st.write("b. What is the sum of the payments?")
+        st.write("What is the total interest paid ?")
+        CASPV_rst = st.number_input("CASPV: Enter Rate")
+        CASPV_n = st.number_input("CASPV: Enter years 36-month = 3")
+        CASPV_p = st.number_input("CASPV Enter P : monthyly = 12")
+        CASPV_PMT = st.number_input("CASPV: Enter PMT")
+        if st.button("CASPV : Caculate PV "):
+            CASPV_PV = (CASPV_PMT/(CASPV_rst/CASPV_p))*(1-1/(1+CASPV_rst/CASPV_p)**(CASPV_n*CASPV_p))
+            st.write(CASPV_PV)
+        
         
         
         
