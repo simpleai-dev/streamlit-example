@@ -18,7 +18,7 @@ st.sidebar.header("Select Chapter")
 chapter = st.sidebar.radio("Select Chapter", ('Finance', 'Economics', 'Statistics'))
 
 if chapter == 'Finance':
-    option_finance = st.selectbox('Select Topic',('Annual Time Value of Money', 'Constant Annuity & Perpetuity'))
+    option_finance = st.selectbox('Select Topic',('Annual Time Value of Money', 'Constant Annuity & Perpetuity','Growing Annuity'))
     if option_finance == 'Annual Time Value of Money':
         st.header("Calculate Future Values")
         st.write("Example : You have $50,000 in savings for retirement. If your investments earn 7% annually, how much will you accumulate in 40 years?")
@@ -150,6 +150,18 @@ if chapter == 'Finance':
         if st.button("CASPV : Caculate PV "):
             CASPV_PV = (CASPV_PMT/(CASPV_rst/CASPV_p))*(1-1/(1+CASPV_rst/CASPV_p)**(CASPV_n*CASPV_p))
             st.write(CASPV_PV)
+            
+    if option_finance == 'Growing Annuity':
+        st.write("As we know that constant Perpetuity is PV=PMT/r")
+        st.write("What amount would we have to put in the bank today at 5% annual interest to genereate a series of payments each year forever, starting with $1000 paid one year from now and the pament growing in each subsequent year by 2% to offfset inflation.")
+        st.write("Formula : PV = PMT/(r-g)")
+        GA1_PMT = st.number_input("GA1: Enter Payment")
+        GA1_r = st.number_input("GA1: Enter Rate")
+        GA1_g = st.number_input("GA1: Enter growth Rate")
+        
+        if st.button("GA1: Calculate PV "):
+            GA1_PV = GA1_PMT/(GA1_r-GA1_g)
+            st.write(GA1_PV)
         
         
         
