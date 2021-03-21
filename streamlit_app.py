@@ -174,17 +174,17 @@ if chapter == 'Finance':
             GA2_PV = (GA2_PMT/(GA2_r- GA2_g))*(1-((1+GA2_g)/(1+GA2_r))**GA2_n)
             st.write(GA2_PV)
             
-        st.subheader("Delayed Growing Annuity")
-        st.write("vera's compensation includes a 10-year annuity that pays $60000 at retirement, with each subsequent payment growing by 2.5%. Suppose Vera;s firm pre-funds the annuity six years before retiremnet. At 6 % interest, how much would the firm need to invest?")
-        st.write(" We already calculated above PV0 and PMT1, but in this case when 6 years before so, PMT6 and PV5 we got.")
-        st.write("Now we need PV0")
-        GA3_r = GA2_r
-        GA3_n = st.number_input("GA3: ex: six years before retirement")
-        GA3_n_actual = GA3_n -1 
-        GA3_FV = GA2_PV
-        if st.button("GA3: Calculate based on previos "):
-            GA3_PV = GA3_FV/(1+GA3_r)**GA3_n_actual      
-            st.write(GA3_PV)  
+            st.subheader("Delayed Growing Annuity")
+            st.write("vera's compensation includes a 10-year annuity that pays $60000 at retirement, with each subsequent payment growing by 2.5%. Suppose Vera;s firm pre-funds the annuity six years before retiremnet. At 6 % interest, how much would the firm need to invest?")
+            st.write(" We already calculated above PV0 and PMT1, but in this case when 6 years before so, PMT6 and PV5 we got.")
+            st.write("Now we need PV0")
+            GA3_r = GA2_r
+            GA3_n = st.number_input("GA3: ex: six years before retirement")
+            GA3_n_actual = GA3_n -1 
+            GA3_FV = GA2_PV
+            if st.button("GA3: Calculate based on previos "):
+                GA3_PV = GA3_FV/(1+GA3_r)**GA3_n_actual      
+                st.write(GA3_PV)  
         
 
         
