@@ -218,6 +218,9 @@ if chapter == 'Finance':
 if chapter == 'Economics':
     option_eco = st.selectbox('Select Topic',('Marginal 1', 'Marginal 2'))
     if option_eco == 'Marginal 1':
-        st.write("Marginal Analysis")
+        st.header("Marginal Analysis")
+        st.subheader("Breakeven Analysis")
+        st.write("TransTech sells its products for $100. Marginal cost is a constant $75 per unit and fixed costs are $50,000. What is the breakeven quantity ?")
+        
 
     
