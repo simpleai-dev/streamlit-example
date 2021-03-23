@@ -18,7 +18,7 @@ st.sidebar.header("Select Chapter")
 chapter = st.sidebar.radio("Select Chapter", ('Finance', 'Economics', 'Statistics'))
 
 if chapter == 'Finance':
-    option_finance = st.selectbox('Select Topic',('Annual Time Value of Money', 'Constant Annuity & Perpetuity','Growing Annuity'))
+    option_finance = st.selectbox('Select Topic',('Annual Time Value of Money', 'Constant Annuity & Perpetuity','Growing Annuity','Net Present Value'))
     if option_finance == 'Annual Time Value of Money':
         st.header("Calculate Future Values")
         st.write("Example : You have $50,000 in savings for retirement. If your investments earn 7% annually, how much will you accumulate in 40 years?")
@@ -209,8 +209,15 @@ if chapter == 'Finance':
             GA5_PMT = GA5_PV*(GA5_rst/GA5_p - GA5_g_p)/(1-((1+GA5_g_p)/(1+GA5_rst/GA5_p))**(GA5_n*GA5_p))
             st.write(GA5_PMT)
         
+    if option_finance == 'Net Present Value':
+        st.header("Net Present Value")
         
         
         
         
-        
+if chapter == 'Economics':
+    option_eco = st.selectbox('Select Topic',('Marginal 1', 'Marginal 2'))
+    if option_eco == 'Marginal 1':
+        st.write("Marginal Analysis")
+
+    
